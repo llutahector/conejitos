@@ -1,7 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Fibonacci</title>
+    <style>
+        /* Estilos para que se vea moderno */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        .resultado {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
 <body>
+
+    <div class="container">
+        <h1>Fibonacci</h1>
+        <p id="mensaje">Calculando el número solicitado...</p>
+        <!-- Aquí se mostrará el resultado -->
+        <div id="display-resultado" class="resultado"></div>
+    </div>
+
     <script>
+        // --- TU CÓDIGO ACTUAL (SIN CAMBIOS) ---
         let n = parseInt(prompt('ingresa un numero: '));
         let a = 0; 
         let b = 1;
@@ -13,8 +62,12 @@
             b = t + b;
         }
 
-        
-    console.log(a);
+        console.log(a);
+        // --- FIN DE TU CÓDIGO ---
+
+        // Mostrando el resultado con estilo en el HTML
+        document.getElementById('mensaje').innerText = `El número en la posición ${n} es:`;
+        document.getElementById('display-resultado').innerText = a;
     </script>
 </body>
 </html>
